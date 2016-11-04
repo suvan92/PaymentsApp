@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
         
         NSInteger paymentTotal = (NSInteger)(lowerBound + arc4random() % (upperBound - lowerBound));
         
-        NSString *paymentMethod = [userInput inputForPrompt:[NSString stringWithFormat:@"\nThank you for shopping at Acme.com. Your total today is: $%ld Please select your payment method:\n1: Paypal\n2: Stripe\n3: Amazon", (long)paymentTotal]];
+        NSString *paymentMethod = [userInput inputForPrompt:[NSString stringWithFormat:@"\nThank you for shopping at Acme.com. Your total today is: $%ld Please select your payment method:\n1: Paypal\n2: Stripe\n3: Amazon\n4: ApplePay", (long)paymentTotal]];
         
         
         int paymentMethodInt = [paymentMethod intValue];
