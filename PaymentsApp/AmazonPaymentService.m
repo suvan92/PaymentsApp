@@ -19,4 +19,20 @@
 //    return outputString;
 }
 
+-(BOOL)canProcessPayment {
+    
+    int paymentServiceAvailable;
+    
+    int lowerBound = 1;
+    int upperBound = 10;
+    
+    paymentServiceAvailable = lowerBound + arc4random() % (upperBound - lowerBound);
+    
+    if (paymentServiceAvailable % 2 == 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end
