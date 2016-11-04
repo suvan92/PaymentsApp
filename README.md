@@ -1,0 +1,3 @@
+# README!!
+
+Between lines 32 and 52 in main.m the delegate of paymentGateway is initialized and then released for no apparent reason. However, this only happens when property option for paymentGateway is weak as opposed to strong. When the option is chaged to strong the delegate is not released and gets called normally. Additionally paymentGateway's memory address never changed despite running the program multiple times, quitting xcode and reopening, cleaning the build and emptying the 'pre-build' folder in the library. I spent quite a while with Shahin trying to figure out why this was but we weren't able to figure it out. For the purpose of the assignment I assigned the property option to be strong.'
